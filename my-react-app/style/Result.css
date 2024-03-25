@@ -1,0 +1,36 @@
+h1 {
+    margin: 100px 0px 15px 25px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin: 0px 35px;
+    font-size: 0.9em;
+}
+
+ul {
+    margin: 20px 0px 0px 25px;
+    font-size: 0.7em;
+}
+
+#result div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultSection {
+    margin: 20px 0px 50px 0px;
+    text-align: justify;
+}
+
+#resultSection span {
+    font-size: 0.7em;
+    text-align: justify;
+    padding: 0px 15px;
+    margin-top: 10px;
+}

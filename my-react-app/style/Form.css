@@ -1,0 +1,120 @@
+#backHome {
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    box-sizing: content-box;
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px;
+    position: relative;
+    top: 0;
+}
+
+form button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+#greeting {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 250px;
+}
+
+a {
+    margin: 10px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.buttons:last-child {
+    width: 260px;
+    height: 50px;
+}
+
+.question {
+    font-size: 1.2em;
+}
+
+.curiosities {
+    width: 80%;
+    padding: 35px 15px;
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdf513;
+    border-radius: 10px;
+}
+
+.curiosities p {
+    width: 350px;
+    text-align: justify;
+    font-size: 0.9em;
+    text-indent: 0px;
+}
+
+#doubt h3 {
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+
+#doubt p {
+    text-indent: 0px;
+}
+
+
+
+/*
+
+---------------- Choose City
+
+
+*/
+
+
+#populationForm button {
+    border: none;
+}
+
+#populationForm button:focus {
+    border: none;
+}
+
+.chooseCityForm p {
+    text-align: center;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+#weatherForm {
+    display: none;
+}
+
+#preferenceForm {
+    display: none;
+}
+
+#weatherForm.visible {
+    display: block;
+}
+
+#preferenceForm.visible {
+    display: block;
+}
+

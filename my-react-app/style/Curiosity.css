@@ -1,0 +1,77 @@
+#curiositySection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.container {
+    width: 260px;
+    height: 260px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    border: 1px solid rgba(0, 0, 0, 0.74);
+    border-radius: 5px;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container h2 {
+    width: 250px;
+    font-size: 1em;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.74);
+    border-radius: 5px;
+}
+
+.curiosity {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.74);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.77);
+    display: none;
+}
+
+.curiosity.active {
+    display: block;
+}
+
+.curiosity p {
+    font-size: 0.8em;
+    margin: 0px;
+    padding: 5px;
+    text-indent: 0px;
+}
+
+#curiosity1 ul {
+    list-style: none;
+    margin: 10px 0px;
+    padding: 0px 0px 0px 10px;
+}
+
+#container1 {
+    background-image: url('/public/apartment.jpg');
+}
+
+#container2 {
+    background-image: url('/public/bathroom.jpg');
+}
+
+#container3 {
+    background-image: url('/public/cplpFlag.png');
+}
+
+#container4 {
+    background-image: url('/public/vascoBridge.jpg');
+}

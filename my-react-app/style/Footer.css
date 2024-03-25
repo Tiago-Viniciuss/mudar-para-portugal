@@ -1,0 +1,96 @@
+footer {
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+}
+
+footer h3 {
+    font-size: 1.2em;
+    padding: 25px;
+    text-align: center;
+    width: 290px;
+}
+
+footer p {
+    margin: 5px;
+    font-weight: 700;
+}
+
+.footerImg {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+}
+
+#socialMedia {
+    display: flex;
+    gap: 15px;
+}
+
+#whatsapp {
+    background-image: url('/public/whatsapp.png');
+}
+
+#instagram {
+    background-image: url('/public/instagram.png');
+}
+
+#linkedin {
+    background-image: url('/public/linkedin.png');
+}
+
+footer .copyright {
+    margin-top: 25px;
+    font-size: 0.6em;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+.copyright a {
+    margin: 2px 5px 0px 2px;
+}
+
+footer a:hover {
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1000px) {
+    footer h3 {
+        font-size: 1.5em;
+        padding: 25px;
+        text-align: center;
+        width: 600px;
+    }
+    
+    .footerImg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    footer .copyright {
+        margin-top: 55px;
+        font-size: 1em;
+    }
+    
+    footer a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: lighter;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+        color: rgb(255, 255, 255);
+    }
+}
