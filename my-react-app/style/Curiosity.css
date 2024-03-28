@@ -1,77 +1,64 @@
+h1 {
+    margin-top: 70px;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+#buttonContainer {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#buttonContainer button {
+    width: 100px;
+    height: 30px;
+    font-size: 0.6em;
+    background-color: #1F1F1F;
+    color: white;
+}
+
+#buttonContainer button:hover {
+    background-color: yellow;
+    color: #1F1F1F;
+    border: 1px solid black;
+}
+
+#buttonContainer button.active {
+    background-color: yellow;
+    color: #1F1F1F;
+    border: 1px solid black;
+}
+
 #curiositySection {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 25px;
 }
 
-.container {
-    width: 260px;
-    height: 260px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
+#curiositySection div {
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    color: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    border: 1px solid rgba(0, 0, 0, 0.74);
-    border-radius: 5px;
 }
 
-.container:hover {
-    cursor: pointer;
+#curiositySection div p {
+    font-size: 0.8em;
 }
 
-.container h2 {
-    width: 250px;
+ul {
+    margin: auto;
     font-size: 1em;
-    background-color: white;
-    padding: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.74);
-    border-radius: 5px;
-}
-
-.curiosity {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    font-size: 0.8em;
-    padding: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.74);
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.77);
-    display: none;
-}
-
-.curiosity.active {
-    display: block;
-}
-
-.curiosity p {
-    font-size: 0.8em;
-    margin: 0px;
-    padding: 5px;
-    text-indent: 0px;
-}
-
-#curiosity1 ul {
-    list-style: none;
-    margin: 10px 0px;
-    padding: 0px 0px 0px 10px;
-}
-
-#container1 {
-    background-image: url('/public/apartment.jpg');
-}
-
-#container2 {
-    background-image: url('/public/bathroom.jpg');
-}
-
-#container3 {
-    background-image: url('/public/cplpFlag.png');
-}
-
-#container4 {
-    background-image: url('/public/vascoBridge.jpg');
+    width: 70%;
 }

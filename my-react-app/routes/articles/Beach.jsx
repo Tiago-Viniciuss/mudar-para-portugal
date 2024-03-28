@@ -5,6 +5,12 @@ import Navigation from '../../components/Navigation'
 import '/style/Tourism.css'
 
 const Beach = () => {
+
+  function navigateTop() {
+    window.scrollTo(0, 0);
+  }
+
+
   return (
     <div>
        <Header/> 
@@ -12,9 +18,9 @@ const Beach = () => {
         
         <article id='beachArticle'>
         <div id='beachBackground'>
+        <h1>05 PRAIAS PORTUGUESAS</h1>
         </div>
-        <h1>05 Praias Portuguesas</h1>
-        <p>Portugal é conhecido por suas praias deslumbrantes, que oferecem uma variedade de paisagens, desde falésias dramáticas até areias douradas e águas cristalinas. O lugar perfeito para desfrutar da natureza e estar mais perto da calmaria e longe da vida urbana. Aqui estão cinco das melhores praias de Portugal!</p>
+        <p className='introText'>Portugal é conhecido por suas praias deslumbrantes, que oferecem uma variedade de paisagens, desde falésias dramáticas até areias douradas e águas cristalinas. <br /> <strong>O lugar perfeito para desfrutar da natureza e estar mais perto da calmaria e longe da vida urbana.</strong> <br />Aqui estão cinco das melhores praias de Portugal!</p>
 
         <h1>Praia da Marinha</h1>
         <span>Algarve</span>
@@ -83,7 +89,7 @@ const Beach = () => {
         </div>
 
         <h5>Praia do Guincho</h5>
-        
+        <span>Cascais</span>
         <p>
           A Praia do Guincho é uma das praias mais conhecidas e espetaculares da região de Cascais, em Portugal. Localizada a cerca de 5 km a oeste do centro de Cascais, esta praia é amplamente reconhecida pelas suas ondas consistentes e ventos fortes, tornando-se um paraíso para os amantes de esportes aquáticos, em especial o surf e o windsurf.
           A Praia do Guincho possui uma vasta extensão de areia dourada, ladeada por dunas e falésias imponentes, proporcionando um cenário naturalmente belo e selvagem. As ondas aqui podem ser vigorosas, o que atrai surfistas e bodyboarders experientes em busca de desafios emocionantes.
@@ -103,6 +109,14 @@ const Beach = () => {
 
         <p>Essas são apenas algumas das muitas praias incríveis que Portugal tem a oferecer, cada uma com sua própria beleza e charme distintos.</p>
         </article>
+        <aside>
+          <h2>Confira também:</h2>
+          <Link to={'/pastel-de-nata'} onClick={navigateTop}>
+              <div id='article2'>
+                  <p className='articlesTitle'>Você conhece o pastel de nata?</p>
+              </div>
+            </Link>
+        </aside>
     </div>
   )
 }

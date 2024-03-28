@@ -14,7 +14,10 @@ const Tourism = () => {
     <div>
         <Header/>
         <Navigation/>
-        <h1>Turismo em Portugal</h1>
+        <h1 id='h1'>Turismo em Portugal</h1>
+        <p>
+          O turismo em Portugal pode ser explorado por diversos ângulos e diferentes regiões. Podendo oferecer história das cidades, dos monumentos, castelos, igrejas, passando pelos mais variados cenários de praias e rios, até mesmo a montanhas com neve. Tudo isso regado a um bom vinho e boa comida tradicional, que é rica em tempero e história. Nesta seção, confira um pouco do que pode ser visto em terras lusitanas.
+        </p>
         <div id='articlesContainer' onClick={navigateTop}>
             <Link to={'/beach'}>
                 <div id='article1'>

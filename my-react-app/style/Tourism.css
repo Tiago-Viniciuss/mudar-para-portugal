@@ -1,4 +1,4 @@
-h1 {
+#h1 {
     margin-top: 80px;
 }
 
@@ -22,10 +22,6 @@ h1 {
     border-radius: 5px;
 } 
 
-#articlesContainer div:hover {
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.701);
-}
-
 #articlesContainer div p {
     background-color: yellow;
     color: rgb(0, 0, 0);
@@ -35,6 +31,12 @@ h1 {
     padding: 20px;
     margin: 0px;
     border-radius: 0px 0px 5px 5px;
+}
+
+.introText {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 
@@ -60,7 +62,12 @@ h1 {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    color: white;
+}
+
+#beachBackground h1 {
+    font-size: 2em;
 }
 
 
@@ -76,7 +83,7 @@ h1 {
     background-size: cover;
     margin: auto;
     margin-top: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 #marinhaBeach1 {
@@ -156,9 +163,14 @@ h1 {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    color: white;
 }
 
+#pastelNataBackground h1 {
+    width: 70%;
+    font-size: 2em;
+}
 
 #pasteldeNata1 {
     background-image: url('/pasteldeNata1.jpg');
@@ -180,7 +192,45 @@ h1 {
     margin-bottom: 35px;
 }
 
+aside div {
+    width: 250px;
+    height: 250px;
+    background-color: gold;
+    display: flex;
+    align-items: end;   
+    transition: .5s;
+    border-radius: 5px;
+    margin: auto;
+}
+
+aside div p {
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px;
+    margin: 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
 @media screen and (min-width: 500px) {
+
+    h1, h2, h3, h4, h5 {
+        margin-top: 45px;
+        font-size: 2em;
+    }
+
+    span {
+        font-size: 1.4em;
+    }
+
+    p {
+        width: 80%;
+        font-size: 1.1em;
+        line-height: 1.7em;
+        margin: auto;
+    }
 
     #articlesContainer {
         width: 100%;
@@ -205,12 +255,16 @@ h1 {
     .tourismArticlesImg div {
         width: 275px;
         height: 275px;
-        margin-bottom: 100px;
+        margin-bottom: 30px;
     }
     
     #beachBackground {
         width: 100%;
         height: 500px;
+    }
+
+    #beachBackground h1 {
+        font-size: 3em;
     }
 
     #beachBackground p {
@@ -237,6 +291,10 @@ h1 {
         height: 500px;
     }
 
+    #pastelNataBackground h1 {
+        font-size: 3em;
+    }
+
     #pastelNataBackground p {
         font-size: 1.9em;
     }
@@ -253,6 +311,24 @@ h1 {
 }
 
 @media screen and (min-width: 900px) {
+
+    
+
+    h1, h2, h3, h4, h5 {
+        margin-top: 45px;
+        font-size: 2em;
+    }
+
+    span {
+        font-size: 1.4em;
+    }
+
+    p {
+        width: 750px;
+        font-size: 1.2em;
+        line-height: 1.7em;
+        margin: auto;
+    }
 
     #articlesContainer {
         width: 100%;
@@ -272,18 +348,34 @@ h1 {
         align-items: end;   
         transition: .5s;
         border-radius: 5px;
-    } 
+    }
+    
+    .tourismArticlesImg {
+        width: 75%;
+        margin: auto;
+        justify-content: space-between;
+    }
 
     .tourismArticlesImg div {
-        width: 375px;
-        height: 375px;
-        margin-bottom: 100px;
+        width: 450px;
+        height: 450px;
+        margin-bottom: 50px;
+        gap: 10px;
     }
 
     #beachBackground {
         width: 100%;
         height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
     }
+
+    #beachBackground h1 {
+        font-size: 4.5em;
+    }
+
 
     #beachBackground p {
         font-size: 2.5em;
@@ -308,6 +400,10 @@ h1 {
     #pastelNataBackground {
         width: 100%;
         height: 650px;
+    }
+
+    #pastelNataBackground h1 {
+        font-size: 4.5em;
     }
 
     #pastelNataBackground p {

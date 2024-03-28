@@ -473,22 +473,50 @@ const Result = () => {
     <div id='result'>
         <Title/>
         <div>
-            <h1 className='question'>Aqui estão os resultados:</h1>
             <section id='resultSection'>
-                <p>
+            <h1 className='question'>Aqui estão os resultados:</h1>
+                <p id='resultText'>
                     Baseado nas suas escolhas, <i>{userName}</i>, se você mudar-se para Portugal para morar <i>{userPeople}</i> em um <i>{userRent}</i> <i>{userLocal}</i> <i>{userCity}</i>, usando <i>{userVehicle}</i>, você terá uma despesa total de aproximadamente <i>{finalPrice + foodBudget + vehicleBudget + fixedExpenses}€.</i> Lembrando que os valores usados nestes cálculos são baseados em valores praticados no mercado atual, no primeiro trimestre de 2024, podendo sofrer alterações por diversos fatores.
                 </p>
-                           <br /> <br />
-                <h2 className='question'>Mais detalhes:</h2>
+
+                <table border="1">
+                <thead>
+                    <tr>
+                    <th colSpan="2">Detalhes das Despesas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Cidade </td>
+                    <td><i>{userCity}</i></td>
+                    </tr>
+                    <tr>
+                    <td>Arrendamento</td>
+                    <td><i>{finalPrice}€</i></td>
+                    </tr>
+                    <tr>
+                    <td>Alimentação</td>
+                    <td><i>{foodBudget}€</i></td>
+                    </tr>
+                    <tr>
+                    <td>Transporte</td>
+                    <td><i>{vehicleBudget}€</i></td>
+                    </tr>
+                    <tr>
+                    <td>Despesas fixas</td>
+                    <td><i>{fixedExpenses}€</i></td>
+                    </tr>
+                    <tr>
+                        <td>Valor final das Despesas:  
+                        </td>
+                        <td>
+                        <strong>{finalPrice + foodBudget + vehicleBudget + fixedExpenses}€</strong>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
                 <div>
-                    <p>Cidade: <i>{userCity}</i></p>
-                    <p>Arrendamento: <i>{finalPrice}€</i></p>
-                    <p>Alimentação: <i>{foodBudget}€</i></p>
-                    <p>Transporte: <i>{vehicleBudget}€</i></p>
-                    <p>Despesas fixas: <i>{fixedExpenses}€</i></p>
-                    <br /> <br />
-                    <span>*Arrendamentos de quartos, normalmente incluem despesas fixas como água, luz e internet</span>
-                    <span>*O serviço de internet não foi calculado, pois depende de vários fatores, como por exemplo, operadora contratada e plano escolhido</span>
+                    <span>*Arrendamentos de quartos, normalmente incluem despesas fixas como água, luz e internet <br /> *O serviço de internet não foi calculado, pois depende de vários fatores, como por exemplo, operadora contratada e plano escolhido</span>
                 </div>
             </section>
             <Link to={'/'}><button className='btn btn-dark' onClick={navigateTop}>Voltar à página principal</button></Link>

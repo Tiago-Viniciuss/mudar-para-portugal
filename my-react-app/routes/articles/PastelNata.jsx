@@ -5,6 +5,11 @@ import Navigation from '../../components/Navigation'
 import '/style/Tourism.css'
 
 const PastelNata = () => {
+
+  function navigateTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div>
        <Header/> 
@@ -12,11 +17,13 @@ const PastelNata = () => {
         
         <article id='beachArticle'>
         <div id='pastelNataBackground'>
+          <h1>O Famoso Pastel de Nata</h1>
         </div>
-        <h1>O Famoso Pastel de Nata</h1>
-        <p>
-            O pastel de nata é uma das mais deliciosas e icônicas sobremesas de Portugal. Também conhecido como pastel de Belém ou pastel de Lisboa, este pequeno doce é uma verdadeira delícia para os amantes de sobremesas em todo o mundo.
-            O pastel de nata é composto por uma massa folhada crocante e uma cremosa mistura de ovos, açúcar, farinha de trigo, leite e baunilha, que são cuidadosamente preparados e cozidos até atingirem uma textura macia e delicada. A sua superfície é polvilhada com uma fina camada de açúcar e canela, o que adiciona um toque extra de sabor e aroma.
+        
+        <p className='introText'>
+            O pastel de nata é uma das mais deliciosas e icônicas sobremesas de Portugal. Também conhecido como pastel de Belém ou pastel de Lisboa, este pequeno doce é uma verdadeira delícia para os amantes de sobremesas em todo o mundo. <br />
+            <strong>O pastel de nata é composto por uma massa folhada crocante e uma cremosa mistura de ovos, açúcar, farinha de trigo, leite e baunilha, que são cuidadosamente preparados e cozidos até atingirem uma textura macia e delicada. A sua superfície é polvilhada com uma fina camada de açúcar e canela, o que adiciona um toque extra de sabor e aroma.</strong> <br />
+            Simplesmente irresistível!
         </p>
         <div className='tourismArticlesImg'>
           <div id='pasteldeNata1' ></div>
@@ -35,6 +42,14 @@ const PastelNata = () => {
         A confeitaria "Antiga Confeitaria de Belém" atrai milhares de visitantes todos os anos, que fazem fila para provar este doce tradicional e autêntico. Além do Pastel de Belém, a confeitaria oferece uma variedade de outras iguarias, mantendo viva a tradição gastronômica de Portugal e o sabor único da sua herança culinária.
         </p>
         </article>
+        <aside>
+          <h2>Confira também:</h2>
+          <Link to={'/beach'}  onClick={navigateTop}>
+                <div id='article1'>
+                  <p className='articlesTitle'>As 05 melhores praias de Portugal</p>
+                </div>
+            </Link>
+        </aside>
     </div>
   )
 }
