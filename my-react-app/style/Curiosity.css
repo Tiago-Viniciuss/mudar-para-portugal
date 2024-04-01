@@ -7,11 +7,12 @@ h2 {
 }
 
 #buttonContainer {
-    width: 70%;
+    width: 90%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -43,7 +44,8 @@ h2 {
 }
 
 #curiositySection div {
-    width: 95%;
+    max-width: 90%;
+    height: 500px;
     padding: 10px;
     border-radius: 10px;
     background-color: #f7f7f7;
@@ -54,11 +56,46 @@ h2 {
 }
 
 #curiositySection div p {
-    font-size: 0.8em;
+    font-size: 0.7em;
+    width: 300px;
 }
 
 ul {
     margin: auto;
-    font-size: 1em;
+    font-size: 0.8em;
     width: 70%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+@media screen and (min-width: 1000px) {
+    #curiositySection {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: 5px;
+    }
+
+    #curiositySection div {
+        width: 450px;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 10px;
+        background-color: #f7f7f7;
+        color: rgb(0, 0, 0);
+    }
+
+    #curiositySection div p {
+        width: 350px;
+        font-size: 0.8em;
+        padding: 10px;
+        margin: 0px;
+    }
 }

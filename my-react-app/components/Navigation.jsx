@@ -19,7 +19,7 @@ const Navigation = () => {
 
   return (
     <nav id='nav'>
-        <ul>
+        <ul id='list'>
             <Link to={'/'} onClick={navigateTop}>
               <li>Home</li>
             </Link>

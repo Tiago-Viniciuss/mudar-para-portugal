@@ -6,7 +6,10 @@ const Header = () => {
 
   function openNav() {
     const nav = document.querySelector('#nav')
+    const list = document.getElementById('list')
+
     nav.classList.toggle('active')
+    list.classList.toggle('visible')
   }
 
   function navigateTop() {

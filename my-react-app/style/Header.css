@@ -57,7 +57,7 @@ nav {
 
     visibility: hidden;
     overflow-x: hidden;
-    transition: .2s;
+    transition: .1s;
     z-index: 98;
 }
 
@@ -75,6 +75,11 @@ nav ul {
     margin-top: 50px;
     margin-left: 0px;
     font-size: 1.2em;
+    visibility: hidden;
+}
+
+ul.visible {
+    visibility: visible;
 }
 
 nav a {
@@ -155,6 +160,7 @@ Title ---------------------------
         position: fixed;
         top: 10px;
         right: 20px;
+        visibility: visible;
     }
     
     nav a {

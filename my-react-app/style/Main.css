@@ -4,17 +4,12 @@
     height: 300px;
 }
 
-#main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #main h2 {
+    font-size: 2.2em;
     padding: 25px;
     margin: 0px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #main h2 span {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -23,7 +18,8 @@
 
 #main p {
     padding: 0px 25px;
-    margin: 10px;
+    margin: auto;
+    margin-bottom: 30px;
     text-align: justify;
 }
 
@@ -43,31 +39,75 @@
 }
 
 #carousel {
-    width: 300px;
-    height: 220px;
-    margin: 70px 5px 20px 5px;
-    border-radius: 5px;
+    width: 100%;
+    height: 350px;
+    margin: 60px 0px 20px 0px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
+#carousel h2 {
+    display: block;
+}
+
+
 img {
-    width: 300px;
-    height: 220px;
-    border-radius: 5px;
+    width: 100%;
+    height: 400px;
+}
+
+#text {
+   display: block;
 }
 
 @media screen and (min-width: 1000px) {
+
+    #main h2 {
+        font-size: 3em;
+    }
+
+    #mainBox {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     #carousel {
-        width: 500px;
-        height: 350px;
-        margin: 120px 5px 20px 5px;
+        width: 100%;
+        height: 700px;
+    }
+
+    #carousel h2 {
+        width: 750px;
+        font-size: 3.5em;
+        color: white;
+        position: absolute;
+        top: 170px;
+        visibility: visible;
+        text-shadow: 1px 2px 2px black;
+    }
+
+    #text {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    p {
+        padding: 0px 25px;
+        margin: 0px;
+        text-align: justify;
+        font-size: 1.1em;
     }
     
     img {
-        width: 500px;
-        height: 350px;
-        border-radius: 5px;
+        width: 100%;
+        height: 700px;
     }
 }
 
