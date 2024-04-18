@@ -19,18 +19,26 @@
     display: flex;
     align-items: end;   
     transition: .5s;
-    border-radius: 5px;
 } 
 
 #articlesContainer div p {
-    background-color: yellow;
+    background-color: rgb(238, 238, 238);
     color: rgb(0, 0, 0);
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
+    font-size: 0.8em;
     width: 100%;
     padding: 20px;
     margin: 0px;
-    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#articlesContainer div span {
+    color: red;
 }
 
 .introText {
@@ -38,7 +46,6 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
 
 #article1 {
     background-image: url('/article1Background.jpg');
@@ -50,20 +57,28 @@
     background-size: cover;
 }
 
+#article3 {
+    background-image: url('/article3Background.jpg');
+    background-size: cover;
+}
+
 #beachArticle {
     text-align: center;
     margin-top: 40px;
 }
 
-#beachBackground {
+.backgroundImg {
     width: 100%;
     height: 300px;
-    background-image: url('/beachBackground.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+#beachBackground {
+    background-image: url('/beachBackground.jpg');
 }
 
 #beachBackground h1 {
@@ -157,14 +172,7 @@
 }
 
 #pastelNataBackground {
-    width: 100%;
-    height: 300px;
-    background-image: url('/pastelNataBackground.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    background-image: url('/pastelNataBackground.jpg');   
 }
 
 #pastelNataBackground h1 {
@@ -192,6 +200,92 @@
     margin-bottom: 35px;
 }
 
+#madeiraArticle {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#madeiraBackground {
+    background-image: url('/madeiraBackground.jpg');
+}
+
+#madeiraBackground h1 {
+    width: 70%;
+    font-size: 2em;
+}
+
+#funchal1 {
+    background-image: url('/funchal1.jpg');
+}
+
+#funchal2 {
+    background-image: url('/funchal2.jpg');
+}
+
+#arieiro1 {
+    background-image: url('/arieiro1.jpeg');
+    width: 300px;
+    height: 180px;
+    background-size: cover;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#arieiro2 {
+    background-image: url('/arieiro2.jpeg');
+}
+
+#arieiro3 {
+    background-image: url('/arieiro3.jpg');
+    
+}
+
+#girao1 {
+    background-image: url('/girao1.jpg');
+}
+
+#girao2 {
+    background-image: url('/girao2.jpeg');
+    
+}
+
+#portomoniz1 {
+    background-image: url('/portomoniz1.jpg');
+    width: 300px;
+    height: 180px;
+    background-size: cover;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#portomoniz2 {
+    background-image: url('/portomoniz2.jpg');
+}
+
+#portomoniz3 {
+    background-image: url('/portomoniz3.jpg');
+}
+
+#santuario1 {
+    background-image: url('/santuario1.jpg');
+    width: 300px;
+    height: 180px;
+    background-size: cover;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#santuario2 {
+    background-image: url('/santuario3.jpg');
+}
+
+#santuario3 {
+    background-image: url('/santuario2.jpg');
+}
+
 aside div {
     width: 250px;
     height: 250px;
@@ -199,19 +293,26 @@ aside div {
     display: flex;
     align-items: end;   
     transition: .5s;
-    border-radius: 5px;
     margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
 }
 
 aside div p {
-    background-color: yellow;
+    background-color: rgb(238, 238, 238);
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: 600;
+    font-size: 0.8em;
     width: 100%;
     padding: 15px;
     margin: 0px;
-    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+aside div span {
+    color: red;
 }
 
 @media screen and (min-width: 500px) {
@@ -249,7 +350,6 @@ aside div p {
         display: flex;
         align-items: end;   
         transition: .5s;
-        border-radius: 5px;
     } 
 
     .tourismArticlesImg div {
@@ -308,6 +408,30 @@ aside div p {
         width: 430px;
         height: 240px;
     }
+
+    #madeiraBackground {
+        width: 100%;
+        height: 500px;
+    }
+
+    #madeiraBackground h1 {
+        font-size: 3em;
+    }
+
+    #arieiro1 {
+        width: 430px;
+        height: 240px;
+    }
+
+    #portomoniz1 {
+        width: 430px;
+        height: 240px;
+    }
+    
+    #santuario1 {
+        width: 430px;
+        height: 240px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -347,7 +471,6 @@ aside div p {
         display: flex;
         align-items: end;   
         transition: .5s;
-        border-radius: 5px;
     }
     
     .tourismArticlesImg {
@@ -418,5 +541,55 @@ aside div p {
     #pasteisBelem {
         width: 580px;
         height: 320px;
+    }
+
+    #madeiraBackground {
+        width: 100%;
+        height: 650px;
+    }
+
+    #madeiraBackground h1 {
+        font-size: 4.5em;
+    }
+
+    #arieiro1 {
+        width: 580px;
+        height: 320px;
+    }
+
+    #portomoniz1 {
+        width: 580px;
+        height: 320px;
+    }
+
+    #santuario1 {
+        width: 580px;
+        height: 320px;
+    }
+
+    aside {
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    aside div {
+        width: 250px;
+        height: 250px;
+        background-color: gold;
+        display: flex;
+        align-items: end;   
+        transition: .5s;
+        margin: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
     }
 }

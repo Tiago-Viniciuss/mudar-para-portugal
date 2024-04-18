@@ -13,8 +13,11 @@ const Navigation = () => {
 
   function closeNav() {
     const nav = document.getElementById('nav')
+    const list = document.getElementById('list')
 
     nav.classList.toggle('active')
+    list.classList.toggle('active')
+
   }
 
   return (
@@ -32,9 +35,15 @@ const Navigation = () => {
             <Link to={'/curiosity'} onClick={navigateTop}>
               <li>Curiosidades</li>
             </Link>
+            <Link to={'/database-result'} onClick={navigateTop}>
+              <li>Meus Resultados</li>
+            </Link>
             <a href="#footer" onClick={closeNav}>
               <li>Contato</li>
             </a>
+            <Link to={'/creator-page'} onClick={navigateTop}>
+              <li>Modo Admin</li>
+            </Link>
         </ul>
     </nav>
   )

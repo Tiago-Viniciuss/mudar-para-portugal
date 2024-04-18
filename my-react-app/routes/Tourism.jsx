@@ -21,12 +21,17 @@ const Tourism = () => {
         <div id='articlesContainer' onClick={navigateTop}>
             <Link to={'/beach'}>
                 <div id='article1'>
-                  <p className='articlesTitle'>As 05 melhores praias de Portugal</p>
+                  <p className='articlesTitle'><span>Turismo</span>As 05 melhores praias de Portugal</p>
                 </div>
             </Link>
             <Link to={'/pastel-de-nata'} onClick={navigateTop}>
               <div id='article2'>
-                  <p className='articlesTitle'>Você conhece o pastel de nata?</p>
+                  <p className='articlesTitle'><span>Culinária</span>Você conhece o pastel de nata?</p>
+              </div>
+            </Link>
+            <Link to={'/madeira-island'} onClick={navigateTop}>
+              <div id='article3'>
+                  <p className='articlesTitle'><span>Turismo</span>Madeira: Um paraíso lusitano</p>
               </div>
             </Link>
         </div>

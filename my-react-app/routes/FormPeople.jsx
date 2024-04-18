@@ -93,7 +93,7 @@ const FormPeople = () => {
       }, [])
 
   return (
-    <div>
+    <div className='formAll'>
       <Title/>
         <form onSubmit={savePeopleData}>
             <h1 className='question'>Quantas pessoas viverão em {userCity}, no total?</h1 >

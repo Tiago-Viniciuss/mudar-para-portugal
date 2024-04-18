@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import '../style/Form.css'
 import { useNavigate } from 'react-router-dom'
 import Title from '../components/Title'
+import Animation from '../components/Animation'
 
 const FormName = () => {
   
@@ -22,22 +23,23 @@ const FormName = () => {
   function navigateTop() {
     window.scrollTo(0, 0);
   }
- 
-  
+
+
+
   
   return (
-    <div>
+    <div className='formAll' id='formName'>
       <Title/>
-      {/*<Link to={'/'}>
-        <button className='material-symbols-outlined' id='backHome'>home</button>
-  </Link>*/}
+      <div id='container'>
+        
+      </div>
       <form id='form' onSubmit={saveName} >
           <h1 className='question'>
-            Olá! Como posso te chamar?
+            Como posso te chamar?
           </h1>
           <input className='form-control' type="text" name="userName" id="userName" placeholder='Digite seu nome ou apelido' required/>
           <div className='buttons'>
-                <Link to={'/'}><button className='btn btn-danger' onClick={navigateTop}>Voltar</button></Link> <br /> <br /><button className='btn btn-dark form-control'>Confirmar</button>
+                <Link to={'/form-email'}><button className='btn btn-danger' onClick={navigateTop}>Voltar</button></Link> <br /> <br /><button className='btn btn-dark form-control'>Confirmar</button>
             </div>   
       </form>
       <section className='curiosities'>

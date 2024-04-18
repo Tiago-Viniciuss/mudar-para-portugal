@@ -9,11 +9,11 @@
 }
 
 #portugueseFlag {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: 250px;
     margin: auto;
     margin-top: 30px;
-    background-image: url('/public/portugueseflag.png');
+    background-image: url('/public/portugueseflag.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -51,7 +51,19 @@ p {
 
 @media screen and (min-width: 500px) {
     #portugueseFlag {
+        width: 100%;
+        height: 650px;
+    }
+
+    .articleImg {
         width: 450px;
         height: 450px;
+    }
+
+    #oldPeople {
+        height: 300px;
+    }
+    #revolution {
+        height: 300px;
     }
 }

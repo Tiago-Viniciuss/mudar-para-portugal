@@ -32,7 +32,7 @@ const FormYear = () => {
     
 
   return (
-    <div>
+    <div className='formAll'>
       <Title/>
         <form onSubmit={saveYear}>
           <h1 className='question'>Em que ano você nasceu?</h1>

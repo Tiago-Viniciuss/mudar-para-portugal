@@ -17,12 +17,12 @@ const Beach = () => {
        <Navigation/>
         
         <article id='beachArticle'>
-        <div id='beachBackground'>
+        <div id='beachBackground' className='backgroundImg'>
         <h1>05 PRAIAS PORTUGUESAS</h1>
         </div>
         <p className='introText'>Portugal é conhecido por suas praias deslumbrantes, que oferecem uma variedade de paisagens, desde falésias dramáticas até areias douradas e águas cristalinas. <br /> <strong>O lugar perfeito para desfrutar da natureza e estar mais perto da calmaria e longe da vida urbana.</strong> <br />Aqui estão cinco das melhores praias de Portugal!</p>
 
-        <h1>Praia da Marinha</h1>
+        <h3>Praia da Marinha</h3>
         <span>Algarve</span>
         
         <p>
@@ -37,7 +37,7 @@ const Beach = () => {
           <div id='marinhaBeach2'></div>
         </div>
 
-        <h2>Praia de Benagil</h2>
+        <h3>Praia de Benagil</h3>
         <span>Algarve</span>
         <p>
           A Praia de Benagil é outra joia do Algarve, famosa principalmente pelo seu icônico Algar de Benagil, uma impressionante caverna marinha em forma de catedral, com uma abertura no topo que permite a entrada da luz solar. Esta formação rochosa é uma das atrações mais emblemáticas da região e pode ser alcançada através de barco ou mesmo de caiaque a partir da própria praia.
@@ -69,7 +69,7 @@ const Beach = () => {
           <div id='ursaBeach2'></div>
         </div>
 
-        <h4>Praia da Rocha</h4>
+        <h3>Praia da Rocha</h3>
         <span>Portimão</span>
         
         <p>
@@ -88,7 +88,7 @@ const Beach = () => {
           <div id='rochaBeach2'></div>
         </div>
 
-        <h5>Praia do Guincho</h5>
+        <h3>Praia do Guincho</h3>
         <span>Cascais</span>
         <p>
           A Praia do Guincho é uma das praias mais conhecidas e espetaculares da região de Cascais, em Portugal. Localizada a cerca de 5 km a oeste do centro de Cascais, esta praia é amplamente reconhecida pelas suas ondas consistentes e ventos fortes, tornando-se um paraíso para os amantes de esportes aquáticos, em especial o surf e o windsurf.
@@ -111,11 +111,18 @@ const Beach = () => {
         </article>
         <aside>
           <h2>Confira também:</h2>
-          <Link to={'/pastel-de-nata'} onClick={navigateTop}>
-              <div id='article2'>
-                  <p className='articlesTitle'>Você conhece o pastel de nata?</p>
-              </div>
-            </Link>
+          <section>
+            <Link to={'/pastel-de-nata'} onClick={navigateTop}>
+                <div id='article2'>
+                    <p className='articlesTitle'><span>Culinária</span>Você conhece o pastel de nata?</p>
+                </div>
+              </Link>
+              <Link to={'/madeira-island'} onClick={navigateTop}>
+                <div id='article3'>
+                    <p className='articlesTitle'><span>Turismo</span>Madeira: Um paraíso lusitano</p>
+                </div>
+              </Link>
+          </section>
         </aside>
     </div>
   )

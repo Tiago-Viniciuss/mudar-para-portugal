@@ -40,62 +40,95 @@ h2 {
 #curiositySection {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-}
-
-#curiositySection div {
-    max-width: 90%;
-    height: 500px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f7f7f7;
-    color: rgb(0, 0, 0);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
 }
 
 #curiositySection div p {
     font-size: 0.7em;
-    width: 300px;
 }
 
 ul {
     margin: auto;
+    font-size: 0.7em;
+    width: 100%;
+}
+
+.container {
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 300px;
+}
+
+.container p {
+    width: 250px;
+    margin-top: 0px;
+}
+
+#adminForm {
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 250px;
+}
+
+#adminForm input {
+    margin-top: 10px;
+}
+
+#databaseCuriosities {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#createCuriosity {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 70px;
+}
+
+@media screen and (min-width: 1000px) {
+
+    
+#curiositySection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#curiositySection div p {
+    font-size: 0.7em;
+}
+
+ul {
+    margin: auto;
+    margin-top: 0px;
     font-size: 0.8em;
     width: 70%;
 }
 
 .container {
+    background-color: rgb(241, 241, 241);
     display: flex;
-    justify-content: center;
-    align-items: start;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    width: 300px;
 }
 
-@media screen and (min-width: 1000px) {
-    #curiositySection {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: start;
-        gap: 5px;
-    }
-
-    #curiositySection div {
-        width: 450px;
-        padding: 0px;
-        margin: 0px;
-        border-radius: 10px;
-        background-color: #f7f7f7;
-        color: rgb(0, 0, 0);
-    }
-
-    #curiositySection div p {
-        width: 350px;
-        font-size: 0.8em;
-        padding: 10px;
-        margin: 0px;
-    }
+#databaseCuriosities {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 25px;
+}
 }

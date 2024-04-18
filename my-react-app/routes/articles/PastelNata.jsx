@@ -16,7 +16,7 @@ const PastelNata = () => {
        <Navigation/>
         
         <article id='beachArticle'>
-        <div id='pastelNataBackground'>
+        <div id='pastelNataBackground' className='backgroundImg'>
           <h1>O Famoso Pastel de Nata</h1>
         </div>
         
@@ -26,14 +26,14 @@ const PastelNata = () => {
             Simplesmente irresistível!
         </p>
         <div className='tourismArticlesImg'>
-          <div id='pasteldeNata1' ></div>
+          <div id='pasteldeNata1' className='pastelNataImg'></div>
         </div>
         <p>
         A história do pastel de nata remonta ao século XIX, quando monges do Mosteiro dos Jerónimos, em Lisboa, começaram a vender esta iguaria para gerar renda durante um período de crise. A receita original foi mantida em segredo por muitos anos, até que em meados do século XX, a família que adquiriu a confeitaria onde os monges faziam os pastéis começou a produzi-los em maior escala e os tornou amplamente disponíveis ao público.
         Hoje em dia, os pastéis de nata são uma atração gastronômica imperdível para os turistas que visitam Portugal, sendo vendidos em padarias, confeitarias e cafés por todo o país. No entanto, alguns estabelecimentos são particularmente renomados pela qualidade dos seus pastéis, como a famosa Fábrica dos Pastéis de Belém, localizada em Lisboa, onde é possível saborear os pastéis de nata de acordo com a receita original dos monges.
         O pastel de nata é frequentemente servido ainda quente, acompanhado de uma chávena de café ou chá, sendo uma verdadeira tentação para quem gosta de doces. A sua combinação única de texturas crocantes e cremosas, juntamente com o sabor rico e reconfortante, torna-o uma sobremesa absolutamente irresistível e uma verdadeira representação da rica tradição gastronômica de Portugal.
         </p>
-        <h2>Pastéis de Belém</h2>
+        <h3>Pastéis de Belém</h3>
         <span>Belém, Lisboa</span>
         <div id='pasteisBelem'></div>
         <p>
@@ -44,11 +44,18 @@ const PastelNata = () => {
         </article>
         <aside>
           <h2>Confira também:</h2>
-          <Link to={'/beach'}  onClick={navigateTop}>
-                <div id='article1'>
-                  <p className='articlesTitle'>As 05 melhores praias de Portugal</p>
-                </div>
+            <section>
+              <Link to={'/beach'} onClick={navigateTop}>
+                    <div id='article1'>
+                      <p className='articlesTitle'><span>Turismo</span>As 05 melhores praias de Portugal</p>
+                    </div>
+                </Link>
+                <Link to={'/madeira-island'} onClick={navigateTop}>
+              <div id='article3'>
+                  <p className='articlesTitle'><span>Turismo</span>Madeira: Um paraíso lusitano</p>
+              </div>
             </Link>
+          </section>
         </aside>
     </div>
   )

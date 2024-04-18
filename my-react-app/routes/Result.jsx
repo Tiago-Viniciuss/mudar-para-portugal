@@ -4,11 +4,33 @@ import { Link } from 'react-router-dom'
 import '../style/Result.css'
 import Title from '../components/Title'
 
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAjrPk-AWBVj45M9zCMfCGdKIxcxDBnBGU",
+  authDomain: "mudar-para-portugal.firebaseapp.com",
+  projectId: "mudar-para-portugal",
+  storageBucket: "mudar-para-portugal.appspot.com",
+  messagingSenderId: "442612081698",
+  appId: "1:442612081698:web:63cb0dbf6ebca3328c167b",
+  measurementId: "G-1SHVGRQSZR"
+};
+
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
+
 const Result = () => {
 
     function navigateTop() {
         window.scrollTo(0, 0);
      }
+
+     const [userEmail, setUserEmail] = useState('')
+    useEffect(()=> {
+        const storedUserEmail = localStorage.getItem('userEmail')
+        setUserEmail(storedUserEmail)
+    })
 
     const [userName, setUserName] = useState('')
     useEffect(()=> {
@@ -419,13 +441,13 @@ const Result = () => {
             if(storedUserPeople == 'sozinho') {
                 setFoodBudget(110)
             } else if (storedUserPeople == 'com mais uma pessoa') {
-                setFoodBudget(180)
+                setFoodBudget(190)
             } else if (storedUserPeople == 'com mais duas pessoas') {
-                setFoodBudget(220)
-            } else if (storedUserPeople == 'com mais três pessoas') {
                 setFoodBudget(250)
+            } else if (storedUserPeople == 'com mais três pessoas') {
+                setFoodBudget(280)
             } else if (storedUserPeople == 'com mais de quatro pessoas') {
-                setFoodBudget(300)
+                setFoodBudget(320)
             }
         })
 
@@ -467,6 +489,39 @@ const Result = () => {
                 setFixedExpenses(85)
             }
         })
+
+        const [totalCosts, setTotalCosts] = useState('')
+
+        useEffect(()=> {
+            setTotalCosts(finalPrice + foodBudget + vehicleBudget + fixedExpenses)
+            localStorage.setItem('totalCosts', totalCosts)
+        })
+
+        const saveInfo = async (e) => {
+    
+            e.preventDefault()
+    
+            try {
+              const usersCollectionRef = collection(firestore, 'Users');
+        
+              await setDoc(doc(usersCollectionRef, userEmail), { Name: userName,
+                Birth: userYear,
+                City: userCity,
+                Local: userLocal,
+                People: userPeople,
+                Rent: userRent,
+                Vehicle: userVehicle,
+                RentPrice: finalPrice,
+                FoodBudget: foodBudget,
+                VehicleBudget: vehicleBudget,
+                FixedExpenses: fixedExpenses,
+                TotalCosts: totalCosts
+              });
+        
+            } catch (error) {
+              console.error('Erro ao adicionar usuário:', error);
+            }
+          }
 
 
   return (
@@ -515,10 +570,12 @@ const Result = () => {
                     </tr>
                 </tbody>
                 </table>
-                <div>
-                    <span>*Arrendamentos de quartos, normalmente incluem despesas fixas como água, luz e internet <br /> *O serviço de internet não foi calculado, pois depende de vários fatores, como por exemplo, operadora contratada e plano escolhido</span>
+                <div className='note'>
+                    <p>*Arrendamentos de quartos, normalmente incluem despesas fixas como água, luz e internet <br /> <br /> *O preço do serviço de internet não foi calculado,  pois depende de vários fatores, como operadora contratada e plano escolhido</p>
                 </div>
             </section>
+            <p>Se quiser acessar os resultados em uma futura ocasião, salve-os e poderá revê-los usando o seu email na seção 'Meus Resultados' do Menu.</p>
+            <button onClick={saveInfo} className='btn btn-dark'>Salvar Dados</button>
             <Link to={'/'}><button className='btn btn-dark' onClick={navigateTop}>Voltar à página principal</button></Link>
         </div>
     </div>

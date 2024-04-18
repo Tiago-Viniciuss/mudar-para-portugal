@@ -36,7 +36,7 @@ const FormCity = () => {
 
     
 
-    <div className='formContainer'>
+    <div className='formAll'>
       <Title/>
           <div>
             <form onSubmit={saveCity}>

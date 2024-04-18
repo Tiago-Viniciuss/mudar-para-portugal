@@ -6,29 +6,38 @@ import Title from '../components/Title'
 
 const FormVehicle = () => {
 
+    const userEmail = localStorage.getItem('userEmail')
+    const userName = localStorage.getItem('userName')
+    const userPeople = localStorage.getItem('userPeople')
+    const userLocal = localStorage.getItem('userLocal')
+    const userRent = localStorage.getItem('userRent')
+    const userCity = localStorage.getItem('userCity')
+    const birthYear = localStorage.getItem('birthYear')
+    
+
+
     const navigate = useNavigate()
 
-    function saveVehicle(e) {
+    const saveVehicle = async (e) => {
 
         const vehicle = document.querySelector('#vehicle')
 
         const userVehicle = String(vehicle.value)
 
-        localStorage.setItem('userVehicle', userVehicle)
-
         e.preventDefault()
         
         navigate('/result')
 
-        window.scrollTo(0, 0);
-      }
+        localStorage.setItem('userVehicle', userVehicle)
+         
+        } 
 
       function navigateTop() {
         window.scrollTo(0, 0);
       }
 
   return (
-    <div>
+    <div className='formAll'>
         <Title/>
         <form onSubmit={saveVehicle} id='formVehicle'>
             <h1 className='question'>Como pretende se locomover?</h1>

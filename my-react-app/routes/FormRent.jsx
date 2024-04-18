@@ -27,7 +27,7 @@ const FormRent = () => {
       }
 
   return (
-    <div>
+    <div className='formAll'>
         <Title/>
         <form onSubmit={saveRent} id='formRent'>
             <h1 className='question'>Que tipo de moradia está buscando?</h1>
